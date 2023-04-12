@@ -27,6 +27,7 @@ const login = async (page) => {
   await page.waitForNavigation();
   await page.waitForSelector('ul.dropdown.menu.align-right.actions a.primary');
   await page.click('ul.dropdown.menu.align-right.actions a.primary');
+  await page.waitForTimeout(2000)
 
 
   await page.click('ul.accordion li.accordion-item:nth-child(4) a.accordion-title', { delay: 2000 });
